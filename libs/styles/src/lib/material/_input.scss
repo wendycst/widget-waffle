@@ -1,0 +1,25 @@
+// //* Angular Material CSS overrides (for UI fixes) */
+
+.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field.mat-mdc-form-field
+  .mdc-notched-outline__notch {
+  border-right-style: hidden;
+}
+.mat-mdc-input-element {
+  box-shadow: none !important;
+}
+
+// Override for form field hint and error wrapper padding from 16px to 5px
+// No system variable for this, so using !important to override Angular Material's default
+.mat-mdc-form-field-hint-wrapper,
+.mat-mdc-form-field-error-wrapper {
+  padding: 0 5px !important;
+}
+
+// Override for form field icon button size so that it matches the size of the input field
+// otherwise the input field with icon button is larger than the input field without icon button
+.mat-mdc-form-field-icon-suffix .mat-mdc-icon-button.mat-mdc-button-base {
+  --mat-icon-button-state-layer-size: 36px;
+  width: var(--mat-icon-button-state-layer-size);
+  height: var(--mat-icon-button-state-layer-size);
+  padding: 7px;
+}

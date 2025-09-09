@@ -1,0 +1,54 @@
+.launchpad {
+  mat-card {
+    border-radius: 16px;
+    width: 168px;
+    min-width: 168px;
+    height: 208px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--grey-20);
+    }
+
+    .icon {
+      border-radius: 50%;
+      height: 94px;
+      width: 94px;
+      background-color: var(--blue-20);
+      margin: 24px auto 10px;
+
+      mat-icon {
+        height: 74px;
+        text-align: center;
+        width: 100%;
+        padding-top: 29px;
+        display: block;
+      }
+
+      svg {
+        color: var(--secondary-blue);
+      }
+    }
+
+    p {
+      text-align: center;
+      color: var(--primary-color);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 26px;
+    }
+  }
+}
+
+.launchpad mat-card p {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.launchpad mat-card .icon mat-icon {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  height: 104px;
+}

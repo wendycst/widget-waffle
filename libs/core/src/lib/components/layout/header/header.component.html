@@ -1,0 +1,59 @@
+<mat-toolbar class="flex flex-row items-center">
+  <div class="flex items-center justify-center h-full">
+    <img
+      alt="Widget Waffle Logo"
+      class="ev-app-logo"
+      src="assets/images/widget-waffle.svg"
+      width="150"
+    />
+  </div>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1.5"
+    height="48"
+    viewBox="0 0 1.5 41.5"
+    class="ev-logo-separator"
+  >
+    <path
+      id="Divider"
+      d="M.5,0V40"
+      transform="translate(0.25 0.75)"
+      fill="none"
+      stroke="#d2d2d2"
+      stroke-linecap="square"
+      stroke-miterlimit="10"
+      stroke-width="1.5"
+    />
+  </svg>
+  <span class="ev-app-title tw-flex-1"> Angular Coding Task </span>
+
+  <div class="tw-flex tw-flex-row ev-avatar-btn">
+    <button mat-button [matMenuTriggerFor]="menu" style="padding: 0px">
+      <div class="tw-flex tw-flex-row">
+        <div class="ev-avatar-circle">
+          <div class="ev-avatar-initials">JD</div>
+        </div>
+        <mat-icon class="mat-icon-down">keyboard_arrow_down</mat-icon>
+      </div>
+    </button>
+    <mat-menu #menu="matMenu">
+      <div class="tw-flex tw-flex-row ev-avatar-lg">
+        <div class="ev-avatar-circle-lg">
+          <div class="ev-avatar-initials">JD</div>
+        </div>
+      </div>
+      <div mat-menu-item>Jane Doe</div>
+      <div mat-menu-item>Widget Waffle Ltd.</div>
+      <div mat-menu-item>IT Department</div>
+      <mat-divider></mat-divider>
+
+      <mat-divider></mat-divider>
+      <button mat-menu-item>
+        <mat-icon class="mat-icon-lock">lock</mat-icon>
+        <span class="ev-logout-text">Log Out</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
+
+<!-- <div class="ev-page-title" [innerHTML]="">Demo Page</div> -->

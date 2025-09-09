@@ -1,0 +1,130 @@
+// libs/styles/src/lib/global/widget-waffle-global-styles.scss
+
+//********** Global Styles **********//
+
+// Page styles
+
+.ev-page-container {
+  background-color: var(--ev-color-page-container-background);
+}
+
+// Form field styles
+
+.ev-form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.ev-form-field > mat-label {
+  margin-left: 1px;
+  font-size: var(--ev-form-field-label-font-size);
+  font-weight: var(--ev-form-field-label-font-weight);
+}
+
+.ev-label {
+  position: relative;
+  display: inline-block;
+}
+
+.ev-required-asterisk {
+  color: var(--mat-sys-error);
+  font-size: 1em;
+  font-weight: 600;
+  margin-left: 2px;
+  position: relative;
+  top: 0px;
+}
+
+.ev-error-page-icon {
+  transform: scale(2);
+  color: var(--mat-sys-error);
+  margin-right: 1rem;
+}
+
+.ev-error-page-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: var(--mat-sys-error);
+  margin-bottom: 1rem;
+}
+
+.ev-error-page-message {
+  color: var(--mat-sys-error);
+  margin-bottom: 2rem;
+}
+
+.ev-error-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: var(--ev-color-error-container);
+  padding-top: 20vh;
+}
+
+.ev-error-logon-message {
+  color: var(--ev-color-error);
+  margin-left: 10px;
+  margin-bottom: 1rem;
+  font-size: medium;
+}
+
+.ev-environment-prod,
+.ev-environment-production {
+  background-color: #0082c9;
+}
+
+.ev-environment-test,
+.ev-environment-testing {
+  background-color: #388e3c; //Material Design "Green 700"
+}
+
+.ev-environment-training {
+  background-color: #7f0a34;
+}
+
+.ev-environment-development,
+.ev-environment-dev {
+  background-color: #ee7c00;
+}
+
+.custom-snackbar-panel-success .mdc-snackbar__surface,
+.custom-snackbar-panel-success .mat-mdc-snackbar-surface {
+  background: var(--ev-color-success) !important;
+}
+
+.custom-snackbar-panel-error .mdc-snackbar__surface,
+.custom-snackbar-panel-error .mat-mdc-snackbar-surface {
+  background: var(--ev-color-error) !important;
+}
+.custom-snackbar-panel-information .mdc-snackbar__surface,
+.custom-snackbar-panel-information .mat-mdc-snackbar-surface {
+  background: var(--ev-color-info) !important;
+}
+.custom-snackbar-panel-warning .mdc-snackbar__surface,
+.custom-snackbar-panel-warning .mat-mdc-snackbar-surface {
+  background: var(--ev-color-warning) !important;
+  color: var(--ev-color-snackbar-warning-text) !important;
+}
+
+.custom-snackbar-panel-warning mat-icon {
+  color: var(--ev-color-snackbar-warning-text) !important;
+}
+
+//********** Custom scrollbar styles **********//
+/* For WebKit browsers (Chrome, Safari, Opera, Edge) */
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6dee1;
+  border-radius: 20px;
+  border: 6px solid transparent;
+  background-clip: content-box;
+}

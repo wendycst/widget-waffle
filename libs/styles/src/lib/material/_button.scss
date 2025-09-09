@@ -1,0 +1,80 @@
+.mat-mdc-icon-button {
+  display: flex !important;
+  align-items: center !important;
+}
+
+/*
+ * ============================================================================
+ * COLOR STYLES
+ * ============================================================================
+ */
+
+.mat-mdc-raised-button[color='warn'] {
+  background-color: var(--ev-color-error) !important;
+  color: var(--ev-color-white) !important;
+}
+
+/*
+ * ============================================================================
+ * FOCUS STATE BOX SHADOW
+ * ============================================================================
+ * Custom focus ring styles for Angular Material buttons using box-shadow
+ * - Uses currentColor for text/outlined/raised buttons (inherits text color)
+ * - Uses Material Design color tokens for unelevated buttons (background-based)
+ * - Supports all Material color variants (primary, warn, accent)
+ * - Provides enhanced visibility for keyboard navigation (:focus-visible)
+ * ============================================================================
+ */
+
+// Focus states for Material buttons
+.mat-mdc-button:focus,
+.mat-mdc-raised-button:focus,
+.mat-mdc-outlined-button:focus {
+  box-shadow: 0 0 0 2px color-mix(in srgb, currentColor 15%, transparent) !important;
+  outline: none;
+}
+
+// Special handling for unelevated buttons (background color based)
+.mat-mdc-raised-button:focus,
+.mat-mdc-unelevated-button:focus {
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--mat-sys-primary) 40%, transparent) !important;
+  outline: none;
+}
+
+.mat-mdc-raised-button[color='warn']:focus,
+.mat-mdc-unelevated-button[color='warn']:focus {
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--mat-sys-error) 40%, transparent) !important;
+}
+
+.mat-mdc-raised-button[color='accent']:focus,
+.mat-mdc-unelevated-button[color='accent']:focus {
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--mat-sys-tertiary) 40%, transparent) !important;
+}
+
+// Enhanced focus for keyboard navigation
+.mat-mdc-button:focus-visible,
+.mat-mdc-raised-button:focus-visible,
+.mat-mdc-outlined-button:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in srgb, currentColor 20%, transparent) !important;
+}
+
+.mat-mdc-raised-button:focus-visible,
+.mat-mdc-unelevated-button:focus-visible {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--mat-sys-primary) 50%, transparent) !important;
+}
+
+.mat-mdc-raised-button[color='warn']:focus-visible,
+.mat-mdc-unelevated-button[color='warn']:focus-visible {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--mat-sys-error) 50%, transparent) !important;
+}
+
+.mat-mdc-raised-button[color='accent']:focus-visible,
+.mat-mdc-unelevated-button[color='accent']:focus-visible {
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--mat-sys-tertiary) 50%, transparent) !important;
+}

@@ -1,0 +1,18 @@
+// libs/styles/src/lib/material/material-theme.scss
+@use '@angular/material' as mat;
+@use './theme-colors' as *;
+@use './variables';
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: $primary-palette,
+      typography: var(--font-family),
+      density: 0,
+    )
+  );
+}
+
+@include mat.form-field-density(-5);
+@include mat.button-density(-1);

@@ -1,0 +1,15 @@
+// Main entry point for all Widget Waffle styles
+
+// Import Tailwind CSS
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+// Import Widget Waffle styles
+@import './global/widget-waffle-global-styles';
+@import './material/index';
+@import './primeng/index';
+@import './tailwind/index';
+
+// Import custom utilities
+@import './utilities/index';

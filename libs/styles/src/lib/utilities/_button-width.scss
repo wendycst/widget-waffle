@@ -1,0 +1,260 @@
+// Button Width Utilities
+// Centralized button sizing utilities for consistent UI across the application
+
+// CSS Custom Properties (Design Tokens)
+// These can be overridden by themes or configuration
+:root {
+  --btn-width-xs: 60px;
+  --btn-width-sm: 80px;
+  --btn-width-md: 120px;
+  --btn-width-lg: 150px;
+  --btn-width-xl: 180px;
+  --btn-width-2xl: 200px;
+  --btn-width-3xl: 250px;
+  --btn-width-4xl: 300px;
+}
+
+// Fixed width utilities with exact pixel values
+// Format: .btn-w-{size} where size is in pixels
+.btn-w-60 {
+  width: 60px !important;
+}
+.btn-w-70 {
+  width: 70px !important;
+}
+.btn-w-80 {
+  width: 80px !important;
+}
+.btn-w-90 {
+  width: 90px !important;
+}
+.btn-w-100 {
+  width: 100px !important;
+}
+.btn-w-110 {
+  width: 110px !important;
+}
+.btn-w-120 {
+  width: 120px !important;
+}
+.btn-w-130 {
+  width: 130px !important;
+}
+.btn-w-140 {
+  width: 140px !important;
+}
+.btn-w-150 {
+  width: 150px !important;
+}
+.btn-w-160 {
+  width: 160px !important;
+}
+.btn-w-170 {
+  width: 170px !important;
+}
+.btn-w-180 {
+  width: 180px !important;
+}
+.btn-w-190 {
+  width: 190px !important;
+}
+.btn-w-200 {
+  width: 200px !important;
+}
+.btn-w-220 {
+  width: 220px !important;
+}
+.btn-w-240 {
+  width: 240px !important;
+}
+.btn-w-250 {
+  width: 250px !important;
+}
+.btn-w-280 {
+  width: 280px !important;
+}
+.btn-w-300 {
+  width: 300px !important;
+}
+
+// Semantic width utilities using design tokens
+// These are more maintainable and theme-friendly
+.btn-w-xs {
+  width: var(--btn-width-xs) !important;
+}
+.btn-w-sm {
+  width: var(--btn-width-sm) !important;
+}
+.btn-w-md {
+  width: var(--btn-width-md) !important;
+}
+.btn-w-lg {
+  width: var(--btn-width-lg) !important;
+}
+.btn-w-xl {
+  width: var(--btn-width-xl) !important;
+}
+.btn-w-2xl {
+  width: var(--btn-width-2xl) !important;
+}
+.btn-w-3xl {
+  width: var(--btn-width-3xl) !important;
+}
+.btn-w-4xl {
+  width: var(--btn-width-4xl) !important;
+}
+
+// Min-width utilities (recommended for better UX as they allow content to expand)
+.btn-min-w-60 {
+  min-width: 60px !important;
+}
+.btn-min-w-80 {
+  min-width: 80px !important;
+}
+.btn-min-w-100 {
+  min-width: 100px !important;
+}
+.btn-min-w-120 {
+  min-width: 120px !important;
+}
+.btn-min-w-140 {
+  min-width: 140px !important;
+}
+.btn-min-w-150 {
+  min-width: 150px !important;
+}
+.btn-min-w-160 {
+  min-width: 160px !important;
+}
+.btn-min-w-180 {
+  min-width: 180px !important;
+}
+.btn-min-w-200 {
+  min-width: 200px !important;
+}
+.btn-min-w-220 {
+  min-width: 220px !important;
+}
+.btn-min-w-250 {
+  min-width: 250px !important;
+}
+.btn-min-w-300 {
+  min-width: 300px !important;
+}
+
+// Semantic min-width utilities
+.btn-min-w-xs {
+  min-width: var(--btn-width-xs) !important;
+}
+.btn-min-w-sm {
+  min-width: var(--btn-width-sm) !important;
+}
+.btn-min-w-md {
+  min-width: var(--btn-width-md) !important;
+}
+.btn-min-w-lg {
+  min-width: var(--btn-width-lg) !important;
+}
+.btn-min-w-xl {
+  min-width: var(--btn-width-xl) !important;
+}
+.btn-min-w-2xl {
+  min-width: var(--btn-width-2xl) !important;
+}
+.btn-min-w-3xl {
+  min-width: var(--btn-width-3xl) !important;
+}
+.btn-min-w-4xl {
+  min-width: var(--btn-width-4xl) !important;
+}
+
+// Max-width utilities for responsive design
+.btn-max-w-150 {
+  max-width: 150px !important;
+}
+.btn-max-w-200 {
+  max-width: 200px !important;
+}
+.btn-max-w-250 {
+  max-width: 250px !important;
+}
+.btn-max-w-300 {
+  max-width: 300px !important;
+}
+.btn-max-w-400 {
+  max-width: 400px !important;
+}
+
+// Responsive width utilities
+.btn-w-full {
+  width: 100% !important;
+}
+.btn-w-auto {
+  width: auto !important;
+}
+.btn-w-fit {
+  width: fit-content !important;
+}
+
+// Responsive breakpoint utilities
+@media (max-width: 768px) {
+  // Mobile-specific button widths
+  .btn-w-sm-full {
+    width: 100% !important;
+  }
+  .btn-w-sm-auto {
+    width: auto !important;
+  }
+  .btn-w-sm-fit {
+    width: fit-content !important;
+  }
+
+  // Override larger widths on smaller screens
+  .btn-w-300,
+  .btn-w-280,
+  .btn-w-250,
+  .btn-w-240,
+  .btn-w-220 {
+    width: 100% !important;
+    max-width: 300px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  // Extra small screens - more aggressive width management
+  .btn-w-xs-full {
+    width: 100% !important;
+  }
+  .btn-w-xs-auto {
+    width: auto !important;
+  }
+
+  // Further reduce widths on very small screens
+  .btn-w-200,
+  .btn-w-190,
+  .btn-w-180,
+  .btn-w-170,
+  .btn-w-160 {
+    width: 100% !important;
+    max-width: 200px !important;
+  }
+}
+
+// Button group utilities for consistent spacing and alignment
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+
+  &.btn-group-equal > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &.btn-group-stack {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}

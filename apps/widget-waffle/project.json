@@ -1,0 +1,100 @@
+{
+  "name": "widget-waffle",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/widget-waffle/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/widget-waffle",
+        "index": "apps/widget-waffle/src/index.html",
+        "browser": "apps/widget-waffle/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/widget-waffle/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/widget-waffle/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "apps/widget-waffle/assets",
+            "output": "assets"
+          }
+        ],
+        "styles": [
+          "apps/widget-waffle/src/styles.scss",
+          "libs/styles/src/lib/index.scss",
+          "libs/styles/src/lib/material/tokens.scss"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "3mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "100kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "widget-waffle:build:production",
+          "port": 4201
+        },
+        "development": {
+          "buildTarget": "widget-waffle:build:development",
+          "port": 4201
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "widget-waffle:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/widget-waffle/jest.config.ts"
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "widget-waffle:build",
+        "staticFilePath": "dist/apps/widget-waffle/browser",
+        "spa": true
+      }
+    }
+  }
+}

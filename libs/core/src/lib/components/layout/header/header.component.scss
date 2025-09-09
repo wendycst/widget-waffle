@@ -1,0 +1,136 @@
+@use '@angular/material' as mat;
+
+.lbl-id-menu-item {
+  @include mat.menu-overrides(
+    (
+      item-leading-spacing: 5px,
+    )
+  );
+  @include mat.checkbox-overrides(
+    (
+      label-text-size: var(--mat-checkbox-label-text-size),
+    )
+  );
+}
+
+.mat-icon-down {
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  width: 24px;
+  margin-top: 12px;
+}
+
+.ev-avatar-circle {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6db6e9;
+  .avatar-initials {
+    font-size: 15px;
+  }
+}
+.ev-avatar-circle-lg {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6db6e9;
+  .ev-avatar-initials {
+    font-size: 40px;
+  }
+}
+
+.ev-avatar-initials {
+  color: white;
+  line-height: 20px;
+  letter-spacing: 0.2625px;
+}
+
+.mat-divider {
+  padding-left: 10px;
+}
+
+.ul li {
+  list-style: none;
+}
+
+.mat-toolbar-row {
+  height: 65px;
+}
+
+.ev-logo-separator {
+  margin: 0 12px;
+}
+
+.ev-app-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--mat-sys-primary);
+  width: 389px;
+  height: 32px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  padding-top: 3px;
+}
+
+mat-toolbar {
+  background-color: white;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.lock-icon {
+  margin-right: -5px;
+  cursor: pointer;
+}
+
+.label-id-cbx {
+  vertical-align: middle;
+  padding-left: 2px;
+}
+
+.ev-logout-text {
+  padding-top: 3px;
+  margin-left: -5px;
+  cursor: pointer;
+}
+
+//#region - widget-waffle
+:host ::ng-deep {
+  .mat-mdc-button-persistent-ripple,
+  .mat-mdc-button-ripple,
+  .mat-mdc-button-touch-target {
+    display: none;
+  }
+}
+
+.ev-avatar-btn .mat-icon {
+  margin: auto;
+  width: auto;
+}
+
+.ev-avatar-lg {
+  justify-content: center;
+}
+
+.mat-icon-lock {
+  color: #0000008a !important;
+}
+
+//#endregion - widget-waffle

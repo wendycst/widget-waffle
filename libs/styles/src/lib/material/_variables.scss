@@ -1,0 +1,247 @@
+:root,
+:host {
+  --font-family: 'Source Sans Pro', Arial, sans-serif;
+
+  // Sysmex Design System Color Palette
+  --ev-color-grey-500: #444444;
+  --ev-color-grey-400: #666666;
+  --ev-color-grey-300: #7f7f7f;
+  --ev-color-grey-200: #9e9e9e;
+  --ev-color-grey-100: #b2b2b2;
+  --ev-color-grey-80: #d2d2d2;
+  --ev-color-grey-60: #e5e5e5;
+  --ev-color-grey-40: #f4f4f4;
+  --ev-color-grey-20: #f9f9f9;
+
+  --ev-color-sysmex-blue: #005bac;
+  --ev-color-sysmex-cyan: #00b8ee;
+
+  --ev-color-blue-500: #0c2a69;
+  --ev-color-blue-400: #143c7f;
+  --ev-color-blue-300: #20569d;
+  --ev-color-blue-200: #2e73bc;
+  --ev-color-blue-100: #4093db;
+  --ev-color-blue-80: #6db6e9;
+  --ev-color-blue-60: #8ccff4;
+  --ev-color-blue-40: #b4e5fb;
+  --ev-color-blue-20: #d9f4fd;
+
+  --ev-color-light-blue-500: #003772;
+  --ev-color-light-blue-400: #004c8a;
+  --ev-color-light-blue-300: #006bab;
+  --ev-color-light-blue-200: #008fcc;
+  --ev-color-light-blue-100: #00b8ee;
+  --ev-color-light-blue-80: #3dd8f4;
+  --ev-color-light-blue-60: #63edf9;
+  --ev-color-light-blue-40: #97fcfd;
+  --ev-color-light-blue-20: #cbfefa;
+
+  --ev-color-green-500: #02524f;
+  --ev-color-green-400: #046356;
+  --ev-color-green-300: #067b60;
+  --ev-color-green-200: #099365;
+  --ev-color-green-100: #0dac67;
+  --ev-color-green-80: #3ecd81;
+  --ev-color-green-60: #66e695;
+  --ev-color-green-40: #9bf6b3;
+  --ev-color-green-20: #ccfad4;
+
+  --ev-color-yellow-500: #7a5c0c;
+  --ev-color-yellow-400: #937314;
+  --ev-color-yellow-300: #b7941f;
+  --ev-color-yellow-200: #dbb62e;
+  --ev-color-yellow-100: #ffda3f;
+  --ev-color-yellow-80: #ffe66f;
+  --ev-color-yellow-60: #ffed8b;
+  --ev-color-yellow-40: #fff4b2;
+  --ev-color-yellow-20: #fffad8;
+
+  --ev-color-light-green-500: #4a650f;
+  --ev-color-light-green-400: #5e7a19;
+  --ev-color-light-green-300: #7a9728;
+  --ev-color-light-green-200: #97b53a;
+  --ev-color-light-green-100: #b6d350;
+  --ev-color-light-green-80: #cfe47a;
+  --ev-color-light-green-60: #e1f197;
+  --ev-color-light-green-40: #f1fabc;
+  --ev-color-light-green-20: #f8fcdd;
+
+  --ev-color-orange-500: #753a0b;
+  --ev-color-orange-400: #8e4e13;
+  --ev-color-orange-300: #b06a1e;
+  --ev-color-orange-200: #d28a2b;
+  --ev-color-orange-100: #f5ac3c;
+  --ev-color-orange-80: #f9c76b;
+  --ev-color-orange-60: #fcd889;
+  --ev-color-orange-40: #fee8b1;
+  --ev-color-orange-20: #fef5d8;
+
+  --ev-color-red-500: #6e0b2c;
+  --ev-color-red-400: #85132f;
+  --ev-color-red-300: #a61f33;
+  --ev-color-red-200: #c62d37;
+  --ev-color-red-100: #e7413e;
+  --ev-color-red-80: #f07a6c;
+  --ev-color-red-60: #f79f8b;
+  --ev-color-red-40: #fcc6b2;
+  --ev-color-red-20: #fde6d8;
+
+  --ev-color-brown-500: #561a0c;
+  --ev-color-brown-400: #682914;
+  --ev-color-brown-300: #823e20;
+  --ev-color-brown-200: #9b572f;
+  --ev-color-brown-100: #b57241;
+  --ev-color-brown-80: #d29d6d;
+  --ev-color-brown-60: #e8bf8f;
+  --ev-color-brown-40: #f7ddb8;
+  --ev-color-brown-20: #fbf0db;
+
+  --ev-color-purple-500: #2a0e49;
+  --ev-color-purple-400: #3b1758;
+  --ev-color-purple-300: #52256e;
+  --ev-color-purple-200: #6b3683;
+  --ev-color-purple-100: #864b99;
+  --ev-color-purple-80: #b577c1;
+  --ev-color-purple-60: #d99be0;
+  --ev-color-purple-40: #f3c2f4;
+  --ev-color-purple-20: #f9e0f8;
+
+  --ev-color-pink-500: #731e64;
+  --ev-color-pink-400: #8b3273;
+  --ev-color-pink-300: #ac4f8a;
+  --ev-color-pink-200: #ce72a3;
+  --ev-color-pink-100: #f09dc1;
+  --ev-color-pink-80: #f6b6cb;
+  --ev-color-pink-60: #fac6d2;
+  --ev-color-pink-40: #fddadf;
+  --ev-color-pink-20: #feeced;
+
+  // System variables
+  --mat-sys-background: #f5f7fa !important; //Replaced the previous light red-gray default (#fcf8f8)
+  --mat-sys-body-large-size: 0.875rem;
+  --mat-sys-surface-container: white;
+  --mat-sys-surface-container-high: white;
+  --mat-sys-corner-medium: 4px;
+  --mat-sys-corner-large: 4px;
+  --mat-sys-corner-full: 4px;
+
+  // Button
+  --mat-button-outlined-container-shape: 4px;
+  --mat-button-text-container-shape: 4px;
+  --mat-button-filled-container-shape: 4px;
+  --mat-button-protected-container-shape: 4px;
+  --mat-button-outlined-outline-color: var(--mat-sys-primary);
+
+  // Calendar
+  --mat-datepicker-calendar-container-background-color: white;
+  --mat-datepicker-calendar-container-elevation-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  // Card
+  --mat-card-elevated-container-color: white;
+
+  // Divider
+  --mat-divider-color: #dcd9d9;
+
+  // Expansion Panel
+  --mat-expansion-container-shape: 4px;
+  --mat-expansion-header-expanded-state-height: 42px;
+  --mat-expansion-header-collapsed-state-height: 42px;
+
+  // Dialog
+  --mat-dialog-actions-padding: 16px;
+
+  // Menu
+  --mat-menu-container-color: white;
+  --mat-menu-container-elevation-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --mat-menu-container-shape: 4px;
+  --mat-menu-divider-bottom-spacing: 0;
+  --mat-menu-divider-top-spacing: 0;
+  --mat-menu-divider-color: #dcd9d9;
+  --mat-menu-item-spacing: 16px;
+  --mat-menu-item-icon-size: 24px;
+  --mat-menu-item-leading-spacing: 16px;
+  --mat-menu-item-trailing-spacing: 16px;
+  --mat-menu-item-with-icon-leading-spacing: 16px;
+  --mat-menu-item-with-icon-trailing-spacing: 16px;
+  --mat-menu-container-elevation-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --mat-menu-item-label-text-color: rgba(0, 0, 0, 0.87);
+  --mat-menu-item-icon-color: rgba(0, 0, 0, 0.87);
+  --mat-menu-item-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-menu-item-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+
+  // Select - follow Angular Material 2 theme variables
+  --mat-option-selected-state-label-text-color: var(--mat-sys-primary);
+  --mat-option-label-text-color: rgba(0, 0, 0, 0.87);
+  --mat-option-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-option-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.04);
+
+  --mat-select-container-elevation-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+  --mat-select-panel-background-color: white;
+  --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, 0.87);
+  --mat-select-disabled-trigger-text-color: rgba(0, 0, 0, 0.38);
+  --mat-select-placeholder-text-color: rgba(0, 0, 0, 0.6);
+  --mat-select-enabled-arrow-color: rgba(0, 0, 0, 0.54);
+  --mat-select-disabled-arrow-color: rgba(0, 0, 0, 0.38);
+  --mat-select-focused-arrow-color: rgba(0, 91, 172, 0.87);
+  --mat-select-invalid-arrow-color: rgba(231, 65, 62, 0.87);
+
+  // Timepicker
+  --mat-timepicker-container-background-color: white;
+  --mat-timepicker-selected-state-label-text-color: var(--mat-sys-primary);
+  --mat-timepicker-label-text-color: rgba(0, 0, 0, 0.87);
+  --mat-timepicker-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-timepicker-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-timepicker-selected-state-layer-color: rgba(0, 0, 0, 0.04);
+
+  //********** Widget Waffle specific variables **********
+  // Header
+  --ev-header-height: 66px;
+
+  // Picklist option (checkbox, radio button)
+  --ev-option-touch-target-padding: 10px;
+
+  // Label
+  --ev-form-field-label-font-size: 14px;
+  --ev-form-field-label-font-weight: 400;
+
+  //********** Widget Waffle specific color variables **********
+
+  // Generic
+  --ev-color-black: #000000;
+  --ev-color-white: #ffffff;
+  --ev-color-success: var(--ev-color-green-100);
+  --ev-color-error: #eb1a1a;
+  --ev-color-info: var(--ev-color-blue-100);
+  --ev-color-warning: var(--ev-color-yellow-100);
+
+  // Copyright & Footer
+  --ev-color-copyright-background: #d2d2d2;
+  --ev-color-footer-border: #9e9e9e;
+
+  // Error page & error message container
+  --ev-color-error-container: #fef2f2;
+
+  // Expanded panel colors
+  --ev-color-panel-header-expanded-background: #f0f6fe;
+  --ev-color-panel-header-confirmed-forecolor: #5ec269;
+
+  // Page container
+  --ev-color-page-container-background: var(--mat-sys-background);
+
+  // PrimeNG table colors
+  --ev-color-table-header-cell-background: #e5e7eb;
+
+  // Snackbar
+  --ev-color-snackbar-warning-text: black;
+
+  // Tab
+  --ev-color-section-tab-background: #bfd5ea;
+
+  // Text
+  --ev-color-text-shadow-dark: #3e6790;
+}
