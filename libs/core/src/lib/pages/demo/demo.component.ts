@@ -29,7 +29,7 @@ export class DemoComponent implements OnInit {
     this.form = this.fb.group({
       date: ['', Validators.required],
     });
-    this.form.get('date')?.setValue('2025-09-10T22:10:00')
+    // this.form.get('date')?.setValue('2025-09-10T22:10:00')
   }
   ngOnInit(): void {
     console.log('DemoComponent initialized');

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Inject, Input, OnChanges, SimpleChanges } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { AbstractControl, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,8 +32,7 @@ const APP_MOMENT_DATE_FORMATS =
     provideNativeDateAdapter(), 
     {
       provide: MAT_DATE_FORMATS,
-      useFactory: (comp: DatePickerComponent) => 
-        APP_MOMENT_DATE_FORMATS,
+      useFactory: () => APP_MOMENT_DATE_FORMATS,
     }, 
     { 
       provide: DateAdapter, 
@@ -50,9 +49,14 @@ const APP_MOMENT_DATE_FORMATS =
 })
 export class DatePickerComponent implements OnChanges{
   @Input() config?: DatePickerConfig;
-  @Input() formControl: any;
+  @Input() formControl!: AbstractControl | null;
+
   minDate = new Date(1990, 0, 1);
   maxDate = new Date(); 
+
+  get control(): FormControl {
+    return this.formControl as FormControl;
+  }
 
   constructor(@Inject(MAT_DATE_FORMATS) public format: any) {
 
@@ -72,8 +76,8 @@ export class DatePickerComponent implements OnChanges{
   }
 
   validateInputBlur() {
-    const parsed = moment(this.formControl.value, this.config?.inputFormat, true);
+    const parsed = moment(this.control?.value, this.config?.inputFormat, true);
     const formatted = parsed.format('YYYY-MM-DDTHH:mm:ss');
-    this.formControl.setValue(formatted, { emitEvent: false });
+    this.control.setValue(formatted, { emitEvent: false });
   }
 }
