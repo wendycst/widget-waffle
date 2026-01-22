@@ -66,6 +66,7 @@ Your implementation must include the following components:
   - The section title and footer should remain fixed while scrolling this area
 - **Layout**: Fixed width sidebar on the right (approximately 30-40% width)
 - **Behavior**: Should remain visible and not scroll with the main content
+- **CRITICAL REQUIREMENT**: Drawer **MUST be collapsible** (expandable/hideable) with toggle functionality
 
 ### 3. Footer
 
