@@ -3,12 +3,7 @@
 ## Table of Contents
 
 - [Setup Guide](#setup-guide)
-- [Coding Task: Configurable Date Picker Component](#coding-task-configurable-date-picker-component)
-  - [Requirements](#requirements)
-  - [Integration](#integration)
-  - [Implementation Notes](#notes)
-  - [Sample Code](#sample-configuration-object)
-  - [Submission Guidelines](#submission)
+- [Coding Task: Layout Implementation](#coding-task-layout-implementation)
 
 ---
 
@@ -43,105 +38,80 @@ Follow these steps to set up and run the project:
 
 ---
 
-# Coding Task: Configurable Date Picker Component
+# Coding Task: Layout Implementation
 
-## Requirements
+Create a responsive page layout that matches the design shown in the reference screenshot (`apps/widget-waffle/assets/images/coding-test-layout-outcome.gif`).
 
-Build a **custom date picker component** with the following features:
+## Layout Structure
 
-### Date Selection
+Your implementation must include the following components:
 
-- Users can select a date using a calendar interface (day, month, year).
-- Users can also manually type the date.
+### 1. Main Content Area (Left Section)
 
-### Library Requirement
+- **Page Title**: Display "Page Title" as the heading
+- **Content**: Populate with sufficient text content to demonstrate scrolling
+- **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
+  - The content should exceed the viewport height
+  - Only this section should scroll, not the entire page
+  - The header and footer should remain fixed while scrolling this area
+- **Layout**: Takes up the majority of the horizontal space (approximately 60-70% width)
 
-- The date picker must be implemented using **Angular Material** or **PrimeNG** (your choice).
+### 2. Drawer/Sidebar Section (Right Section)
 
-### Configurable Display
+- **Section Title**: "Drawer's Section Title"
+- **Content**: Contains informational text or instructions
+- **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
+  - The content should exceed the viewport height
+  - Only this section should scroll, not the entire drawer
+  - The section title and footer should remain fixed while scrolling this area
+- **Layout**: Fixed width sidebar on the right (approximately 30-40% width)
+- **Behavior**: Should remain visible and not scroll with the main content
 
-- The component must accept a configuration object:
+### 3. Footer
 
-  ```typescript
-  {
-    inputFormat: "DDMMYYYY",      // Format for manual entry (one of: DDMMYYYY, MMDDYYYY, or YYYYMMDD)
-    displayFormat: "DD/MM/YYYY",  // Format for display after entry
-  }
-  ```
+- **Main Content Area Button**: One action button (Submit) aligned to the right
+  - **Submit**: Primary/filled button style
+- **Sidebar Button**: One action button (Search) aligned to the center
+  - **Search**: Primary/filled button style
+- Fixed at the bottom of their respective sections
 
-- Manual entry must support **one of the following formats** (as chosen via configuration):
+## Technical Requirements
 
-  - `DDMMYYYY`
-  - `MMDDYYYY`
-  - `YYYYMMDD`
+1. **Responsive Layout**
 
-- After the user exits (blurs) the field **or via live validation**:
-  - The date should be displayed in the configured display format (e.g., DD/MM/YYYY).
-  - The underlying form value should be a date and time string in **ISO 8601 format without a time zone**:
-    - Format: `YYYY-MM-DDTHH:mm:ss`
-    - Example: `2025-09-08T00:00:00`
+   - Use CSS Flexbox or CSS Grid for the two-column layout
+   - Ensure proper spacing and alignment
+   - **Allowed tools for creating the two-column layout:**
+     1. Angular Material Sidenav
+     2. CSS (flexbox or grid)
+     3. Tailwind (optional)
+   - **No other third-party libraries are allowed**
 
-### Validation
+2. **Scrollable Area**
 
-- The field should **not accept alpha characters** (only numeric input).
-- If an invalid date is entered (e.g., `99992025`), display an appropriate error message.
-- **Default date is not required.**
-- **Default allowed date range:**
-  - Earliest: **01 Jan 1990**
-  - Latest: **Current date**
+   - Implement proper overflow handling for the main content area
+   - The main content section must scroll independently
+   - Header and footer remain fixed in viewport
 
-## Integration
+3. **Styling**
 
-- The component must be usable in an **Angular reactive form**.
-- On the **Demo page**, provide a sample reactive form with a single date field using your custom date picker.
+   - Maintain consistent padding and margins
 
-## Notes
+4. **Angular Implementation**
+   - Create components as needed
+   - Follow Angular best practices
+   - Use Angular Material or PrimeNG components where appropriate (buttons, icons, etc.)
 
-Your implementation should cover:
+## Deliverables
 
-- Calendar UI for selection (using Angular Material or PrimeNG)
-- Manual date input with validation
-- Configurable formats (`DDMMYYYY`, `MMDDYYYY`, or `YYYYMMDD`)
-- Display and value transformation (after blur or live validation)
-- Integration with Angular reactive forms
+- Working implementation that matches the reference layout
+- Properly structured Angular components
+- Responsive design that works on different screen sizes
+- Support minimum desktop width: 1280 × 720 px
+- Demonstration of the scrollable main content area
 
----
+## Reference
 
-## Sample Configuration Object
+See `apps/widget-waffle/assets/images/coding-test-layout-outcome.gif` for the visual reference of the expected layout.
 
-```typescript
-const datePickerConfig = {
-  inputFormat: 'DDMMYYYY',
-  displayFormat: 'DD/MM/YYYY',
-};
-```
-
-## Sample Reactive Form Usage
-
-```typescript
-// In DemoPageComponent
-form = this.fb.group({
-  date: ['', Validators.required],
-});
-
-// In template
-<app-custom-date-picker
-  [formControl]="form.get('date')"
-  [config]="datePickerConfig">
-</app-custom-date-picker>
-```
-
----
-
-## Submission
-
-Please provide all relevant component, template, and configuration code.
-
-**Requirements:**
-
-- Include validation logic and error messaging
-- Show integration in a demo Angular reactive form page
-- Make sure to use **Angular Material** or **PrimeNG** for the calendar/date picker UI
-- The form value must be a date and time string in the format `YYYY-MM-DDTHH:mm:ss` (no time zone)
-- Support manual entry formats: `DDMMYYYY`, `MMDDYYYY`, or `YYYYMMDD` (as configured)
-- Date formatting and validation should occur after field blur or via live validation
+**Note**: If there is any discrepancy between the requirements in this README.md and the reference screenshot, follow the requirements specified in README.md.
