@@ -1,4 +1,4 @@
-# Angular Coding task 1
+# Angular Coding task
 
 ## Table of Contents
 
@@ -50,6 +50,7 @@ Your implementation must include the following components:
 
 - **Page Title**: Display "Page Title" as the heading
 - **Content**: Populate with sufficient text content to demonstrate scrolling
+- (See Optional Bonus below for dynamic content via API)
 - **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
   - The content should exceed the viewport height
   - Only this section should scroll, not the entire page
@@ -75,6 +76,25 @@ Your implementation must include the following components:
 - **Sidebar Button**: One action button (Search) aligned to the center
   - **Search**: Primary/filled button style
 - Fixed at the bottom of their respective sections
+
+
+## Optional Bonus: Dynamic Content via Public API
+💡 This is optional but strongly encouraged to demonstrate real-world frontend skills.
+
+Replace the static placeholder text in the Main Content Area with live data from a public API:
+
+- Fetch posts from: https://jsonplaceholder.typicode.com/posts
+- Display the first 10 posts
+- For each post, show:
+  - Title (as a subheading)
+  - Body (as paragraph text)
+- Show a loading state (e.g., “Loading…” or a spinner) while data is being fetched
+- Handle errors gracefully (e.g., display “Failed to load content” if the request fails)
+- Implementation requirements:
+  - Use Angular’s HttpClient
+  - Encapsulate data logic in a dedicated service
+  - Use the async pipe in the template (avoid manual subscription management)
+  - Do not hardcode the API URL in components—use environment files or constants
 
 ## Technical Requirements
 
