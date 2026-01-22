@@ -1,4 +1,4 @@
-# Angular Coding Task
+# Angular Coding task 1
 
 ## Table of Contents
 
