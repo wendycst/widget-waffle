@@ -40,7 +40,7 @@ Follow these steps to set up and run the project:
 
 # Coding Task: Layout Implementation
 
-Create a responsive page layout that matches the design shown in the reference screenshot (`apps/widget-waffle/assets/images/coding-test-layout-outcome.gif`).
+Create a responsive page layout that matches the design shown in the reference screenshot (`apps/widget-waffle/assets/images/coding-test-layout.png`).
 
 ## Layout Structure
 
@@ -112,6 +112,6 @@ Your implementation must include the following components:
 
 ## Reference
 
-See `apps/widget-waffle/assets/images/coding-test-layout-outcome.gif` for the visual reference of the expected layout.
+See `apps/widget-waffle/assets/images/coding-test-layout.png` for the visual reference of the expected layout.
 
 **Note**: If there is any discrepancy between the requirements in this README.md and the reference screenshot, follow the requirements specified in README.md.
