@@ -1,4 +1,4 @@
-# Angular Coding task
+# Angular Coding Test
 
 ## Table of Contents
 
@@ -48,38 +48,46 @@ Your implementation must include the following components:
 
 ### 1. Main Content Area (Left Section)
 
-- **Page Title**: Display "Page Title" as the heading
 - **Content**: Populate with sufficient text content to demonstrate scrolling
-- (See Optional Bonus below for dynamic content via API)
+- (See Requirement 3 below for dynamic content via API)
 - **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
   - The content should exceed the viewport height
   - Only this section should scroll, not the entire page
-  - The header and footer should remain fixed while scrolling this area
 - **Layout**: Takes up the majority of the horizontal space (approximately 60-70% width)
 
 ### 2. Drawer/Sidebar Section (Right Section)
 
+#### Section Title Area
+
 - **Section Title**: "Drawer's Section Title"
+- Fixed at the top while content scrolls
+
+#### Content Area
+
 - **Content**: Contains informational text or instructions
 - **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
   - The content should exceed the viewport height
   - Only this section should scroll, not the entire drawer
   - The section title and footer should remain fixed while scrolling this area
-- **Layout**: Fixed width sidebar on the right (approximately 30-40% width)
-- **Behavior**: Should remain visible and not scroll with the main content
-- **CRITICAL REQUIREMENT**: Drawer **MUST be collapsible** (expandable/hideable) with toggle functionality
 
-### 3. Footer
+#### Sidebar Footer Area
 
-- **Main Content Area Button**: One action button (Submit) aligned to the right
-  - **Submit**: Primary/filled button style
 - **Sidebar Button**: One action button (Search) aligned to the center
   - **Search**: Primary/filled button style
 - Fixed at the bottom of their respective sections
 
+#### General Layout Requirements
 
-## Optional Bonus: Dynamic Content via Public API
-💡 This is optional but strongly encouraged to demonstrate real-world frontend skills.
+- **Library**: Use Angular Material MatSidenavModule
+- **Layout**: Fixed width sidebar on the right (approximately 30-40% width)
+- **Behavior**: Should remain visible and not scroll with the main content
+- **CRITICAL REQUIREMENT**: Drawer **MUST be collapsible** (expandable/hideable) with toggle functionality
+
+> **💡 Hint**: Assume the app contains multiple pages (routes). Not every page requires a drawer, and different pages panel may require different content.
+
+> **📝 Note**: Colorful border lines in the visual reference image are indicators only; do not show borders in actual UI.
+
+### 3. Dynamic Content via Public API
 
 Replace the static placeholder text in the Main Content Area with live data from a public API:
 
@@ -112,7 +120,6 @@ Replace the static placeholder text in the Main Content Area with live data from
 
    - Implement proper overflow handling for the main content area
    - The main content section must scroll independently
-   - Header and footer remain fixed in viewport
 
 3. **Styling**
 
@@ -127,9 +134,18 @@ Replace the static placeholder text in the Main Content Area with live data from
 
 - Working implementation that matches the reference layout
 - Properly structured Angular components
+- Use **_MatSidenavModule_**
 - Responsive design that works on different screen sizes
 - Support minimum desktop width: 1280 × 720 px
 - Demonstration of the scrollable main content area
+
+## Submission Instructions
+
+1. Clone the original repository
+2. Create a new private repository under your own GitHub account **_(not a fork)_**
+3. Push your changes to this private repository
+4. Add wendycst as a collaborator
+5. Share the repository link with us
 
 ## Reference
 
