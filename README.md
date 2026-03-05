@@ -144,7 +144,7 @@ Replace the static placeholder text in the Main Content Area with live data from
 1. Clone the original repository
 2. Create a new private repository under your own GitHub account **_(not a fork)_**
 3. Push your changes to this private repository
-4. Add wendycst as a collaborator
+4. Add `wendycst` and `renu365` as collaborators
 5. Share the repository link with us
 
 ## Reference
