@@ -48,7 +48,7 @@ Your implementation must include the following components:
 
 ### 1. Main Content Area (Left Section)
 
-- **Content**: Populate with sufficient text content to demonstrate scrolling
+- **Content**: Populate with sufficient list items to demonstrate scrolling
 - (See Requirement 3 below for dynamic content via API)
 - **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
   - The content should exceed the viewport height
@@ -64,7 +64,8 @@ Your implementation must include the following components:
 
 #### Content Area
 
-- **Content**: Contains informational text or instructions
+- **Content**: Populate with sufficient list items to demonstrate scrolling
+- (See Requirement 3 below for dynamic content via API)
 - **CRITICAL REQUIREMENT**: This section **MUST be scrollable**
   - The content should exceed the viewport height
   - Only this section should scroll, not the entire drawer
@@ -89,10 +90,10 @@ Your implementation must include the following components:
 
 ### 3. Dynamic Content via Public API
 
-Replace the static placeholder text in the Main Content Area with live data from a public API:
+Replace the static placeholder text in the **Main Content Area** and **Sidebar's Content Area** with live data from a public API:
 
 - Fetch posts from: https://jsonplaceholder.typicode.com/posts
-- Display the first 10 posts
+- Make the number of items displayed in the list configurable. Display a dropdown at the top of the Main Content Area with the following options: 10, 20, 30, 40, 50. Handle a reasonable maximum limit so that it does not negatively impact UI performance
 - For each post, show:
   - Title (as a subheading)
   - Body (as paragraph text)
@@ -126,9 +127,14 @@ Replace the static placeholder text in the Main Content Area with live data from
    - Maintain consistent padding and margins
 
 4. **Angular Implementation**
+
    - Create components as needed
    - Follow Angular best practices
    - Use Angular Material or PrimeNG components where appropriate (buttons, icons, etc.)
+
+5. **Componentization**
+   - Keep the demo component clean and limited to the main layout code only
+   - Add any dummy content within a separate child component
 
 ## Deliverables
 
